@@ -2,7 +2,7 @@
 
 # List of dotfiles to copy from home directory to repository
 dotfiles=(
-    "$HOME/.zshrc"
+#    "$HOME/.zshrc"
     "$HOME/.tmux.conf"
     "$HOME/.tmux.conf.local"
     "$HOME/.config/nvim"
