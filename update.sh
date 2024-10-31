@@ -6,6 +6,8 @@ dotfiles=(
     "$HOME/.tmux.conf"
     "$HOME/.tmux.conf.local"
     "$HOME/.config/nvim"
+    "$HOME/lib/data/functions.sh"
+    "$HOME/lib/data/ghrc"
 )
 
 # Get the directory where this script is located (assumed to be the dotfiles repo)
