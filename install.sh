@@ -25,6 +25,10 @@ for file in "${dotfiles[@]}"; do
         # Backup existing file or directory
         backup_dest="$BACKUP_DIR/$file"
         mkdir -p "$(dirname "$backup_dest")"
+
+        # Remove any existing files or directories in the backup location
+        rm -rf "$backup_dest"
+
         mv "$dest" "$backup_dest"
         echo "Backed up $dest to $backup_dest"
     fi

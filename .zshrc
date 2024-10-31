@@ -92,7 +92,7 @@ backup() {
 }
 
 # If you have backups configured
-backup
+#backup
 
 # Cowsay prompt
 source ~/lib/data/functions.sh
