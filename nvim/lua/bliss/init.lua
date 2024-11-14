@@ -30,13 +30,12 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+vim.api.nvim_create_autocmd("BufWritePre", {
     group = BlissGroup,
     pattern = "*.go",
     callback = function()
-        local pos = vim.api.nvim_win_get_cursor(0)
-        vim.cmd("silent! :%!gofmt")
-        vim.api.nvim_win_set_cursor(0, pos)
+        -- Use Neovim's LSP formatting
+        vim.lsp.buf.format({ async = false })
     end,
 })
 
