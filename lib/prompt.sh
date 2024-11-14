@@ -47,3 +47,12 @@ function get_computer_info() {
   
   echo "$info"
 }
+
+battery=$(battery_pct_prompt | sed 's/\x1b\[[0-9;]*[a-zA-Z]//g' | sed 's/%{[^}]*}\[\([0-9]*\)%%\].*/\1/')
+welcome_msg=$(get_computer_info "$battery" "N/A")
+print_box "$welcome_msg"
+
+# Only if the pwd is ~, then cd to ~/Desktop
+if [[ $PWD == $HOME ]]; then
+  cd ~/Desktop
+fi
