@@ -4,6 +4,10 @@ source ~/dotfiles/lib/path.sh
 source ~/dotfiles/lib/prompt.sh
 source ~/dotfiles/lib/ghrc.sh
 
+alias vim="nvim"
+alias t='tmux attach -t $1'
+alias l='tree --du -h -L 1 -F'
+
 # Yubikey
 export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
 
