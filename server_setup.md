@@ -124,11 +124,27 @@ $ sudo usermod -aG docker bliss
 
 You may need to log out and back in for this to take effect.
 
+### 4. Install OMZ
+
+First, get `zsh`:
+
+```bash
+$ sudo apt update
+$ sudo apt install -y zsh
+$ chsh -s $(which zsh) # you need password
+```
+
+Now, install `omz`:
+
+```bash
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
 ### 5. Setup dotfiles
 
 ```bash
-$ git clone
-
+$ git clone git@github.com:btschwartz12/dotfiles.git
+$ cp ~/dotfiles/.zshrc ~/.zshrc
 
 
 
