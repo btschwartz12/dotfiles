@@ -30,13 +30,17 @@ plugins=(git
         copyfile
         macos
 	      alias-finder
-	    aliases
-	    battery
+	      aliases
+	      battery
         emotty
-        docker
-        emoji
         zsh-vi-mode
         )
+
+mkdir -p ~/.oh-my-zsh/custom/plugins
+[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-vi-mode ] && git clone https://github.com/jeffreytse/zsh-vi-mode "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode"
+[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ] && git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+[ ! -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ] && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
 
 source $ZSH/oh-my-zsh.sh
 
