@@ -145,6 +145,15 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/t
 ```bash
 $ git clone git@github.com:btschwartz12/dotfiles.git
 $ cp ~/dotfiles/.zshrc ~/.zshrc
+$ sudo apt install lolcat boxes
+$ omz reload
+```
+
+### 6. Install helpful tools
+
+```bash
+$ sudo apt update && sudo apt install btop -y
+
 
 
 
