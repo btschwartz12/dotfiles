@@ -156,9 +156,4 @@ $ sudo apt update && sudo apt install btop -y
 $ sudo apt install -y bat
 $ mkdir -p ~/.local/bin
 $ ln -s /usr/bin/batcat ~/.local/bin/bat
-
-
-
-
-bpytop (or btop?)
-
+```
