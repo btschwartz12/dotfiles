@@ -25,8 +25,8 @@ ZSH_THEME_RANDOM_IGNORED=("dallas" "superjarin" "humza" "mikeh" "half-life"
 # Plugins
 plugins=(git
         z
-        zsh-autosuggestions
         zsh-syntax-highlighting
+        zsh-autosuggestions
         copyfile
         macos
 	      alias-finder

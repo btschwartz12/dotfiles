@@ -11,7 +11,12 @@ return {
         require('telescope').setup({})
 
         local builtin = require('telescope.builtin')
-        vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>ff', function()
+            builtin.find_files({
+                hidden = true,
+                file_ignore_patterns = { "%.git/" }
+            })
+        end, {})
         vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
         vim.keymap.set('n', '<leader>fw', function()

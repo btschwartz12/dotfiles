@@ -1,0 +1,8 @@
+source ~/dotfiles/lib/omz.sh
+source ~/dotfiles/lib/aliases.sh
+source ~/dotfiles/lib/path.sh
+source ~/dotfiles/lib/prompt.sh
+source ~/dotfiles/lib/ghrc.sh
+source ~/dotfiles/lib/fzf.sh
+
+# add custom stuff below

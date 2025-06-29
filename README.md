@@ -4,15 +4,8 @@ cd ~/dotfiles
 ```
 
 ## zsh
-Change your `.zshrc` to be this:
-```bash
-source ~/dotfiles/lib/omz.sh
-source ~/dotfiles/lib/aliases.sh
-source ~/dotfiles/lib/path.sh
-source ~/dotfiles/lib/prompt.sh
-source ~/dotfiles/lib/ghrc.sh
-# include other customizations below
-```
+
+See [`.zshrc.example`](.zshrc.example) for an example of a `.zshrc` file.
 
 ## tmux
 

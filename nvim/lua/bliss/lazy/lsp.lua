@@ -22,35 +22,35 @@ return {
 
         require("fidget").setup({})
         require("mason").setup()
+        
+        -- First set up mason-lspconfig with ensure_installed
         require("mason-lspconfig").setup({
             ensure_installed = {
-                "lua_ls",
                 "gopls",
+                "pyright",
             },
-            handlers = {
-                function(server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup {
-                        capabilities = capabilities
-                    }
-                end,
+            automatic_installation = true,
+        })
 
-                zls = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.zls.setup({
-                        root_dir = lspconfig.util.root_pattern(".git", "build.zig", "zls.json"),
-                        settings = {
-                            zls = {
-                                enable_inlay_hints = true,
-                                enable_snippets = true,
-                                warn_style = true,
-                            },
-                        },
-                    })
-                    vim.g.zig_fmt_parse_errors = 0
-                    vim.g.zig_fmt_autosave = 0
+        -- Then set up each LSP server
+        local lspconfig = require("lspconfig")
 
-                end,
-            }
+        -- Setup for gopls
+        lspconfig.gopls.setup({
+            capabilities = capabilities,
+        })
+
+        -- Setup for pyright
+        lspconfig.pyright.setup({
+            capabilities = capabilities,
+            settings = {
+                python = {
+                    analysis = {
+                        autoSearchPaths = true,
+                        useLibraryCodeForTypes = true,
+                    },
+                },
+            },
         })
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
