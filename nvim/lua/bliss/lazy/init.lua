@@ -1,5 +1,4 @@
 return {
-    "ellisonleao/gruvbox.nvim",
     "github/copilot.vim",
     "0xm4n/resize.nvim",
     {
