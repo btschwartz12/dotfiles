@@ -30,7 +30,7 @@ return {
         }
 
         -- Set footer
-        dashboard.section.footer.val = "yo 😈"
+        dashboard.section.footer.val = "😈"
 
         -- Configure layout with proper padding for vertical centering
         dashboard.config.layout = {
